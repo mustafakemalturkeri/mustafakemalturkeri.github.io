@@ -7069,8 +7069,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .youtube-box {
   position: relative;
-  width: 560px;
-  height: 315px;
 }
 
 .youtube-box img {
@@ -7113,7 +7111,8 @@ a.text-dark:hover, a.text-dark:focus {
   @page {
     size: a3; }
   body {
-    min-width: 992px !important; }
+    min-width: 992px !important;
+	}
   .container {
     min-width: 992px !important; }
   .navbar {
@@ -7136,7 +7135,7 @@ a.text-dark:hover, a.text-dark:focus {
     .table-dark tbody + tbody {
       border-color: #dee2e6; }
   .table .thead-dark th {
-    color: inherit;
+    color: #000000;
     border-color: #dee2e6; }
 	.youtube-thumbnail {
     display: block !important;
