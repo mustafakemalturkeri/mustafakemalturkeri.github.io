@@ -7099,9 +7099,9 @@ a.text-dark:hover, a.text-dark:focus {
   @page {
     size: a4; }
   body {
-    min-width: unset !important; }
+    min-width: 1984px !important; }
   .container {
-    min-width: unset !important; }
+    min-width: 1984px !important; }
   .navbar {
     display: none; }
   .badge {
