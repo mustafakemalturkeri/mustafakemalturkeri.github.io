@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light" data-title-en="CV | Mustafa Kemal Türkeri" data-title-tr="Özgeçmiş | Mustafa Kemal Türkeri">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV | Mustafa Kemal Türkeri</title>
+  <meta name="description" content="CV of Mustafa Kemal Türkeri, water resources engineer: river basin planning, hydrological modelling, drought and climate change assessment, GIS and data systems.">
+  <link rel="icon" href="_images/mkturkeri.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
+  <style>
+    body { background: #e8ebea; }
+    .bar { max-width: 210mm; margin: 0 auto; padding: 14px 0 10px; display: flex; align-items: center; gap: 10px; }
+    .bar .home { margin-right: auto; font-weight: 600; font-size: 0.88rem; text-decoration: none; }
+    .bar .btn { padding: 9px 14px; font-size: 0.8rem; }
+    .paper {
+      max-width: 210mm; margin: 0 auto 40px; background: #fff; color: var(--ink);
+      padding: 15mm 15mm 17mm; font-size: 13.5px; line-height: 1.5;
+      box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 10px 30px rgba(0,0,0,.08);
+    }
+    .cv-head { display: flex; gap: 20px; align-items: center; padding-bottom: 14px; border-bottom: 2px solid var(--accent); }
+    .cv-head .id { flex: 1; min-width: 0; }
+    .cv-head img { width: 26mm; height: 26mm; border-radius: 50%; object-fit: cover; flex: none; }
+    .cv-head h1 { font-size: 1.95rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+    .cv-head .title { margin: 0 0 3px; color: var(--accent); font-weight: 600; font-size: 0.98rem; }
+    .cv-head .cofounder { margin: 0 0 6px; font-size: 0.9rem; font-weight: 500; color: var(--petrol); }
+    .cv-head .contact-line { margin: 0; font-size: 0.85rem; color: var(--muted); }
+    .cv-head .contact-line a { color: var(--accent); white-space: nowrap; }
+    .sep { color: var(--rule); margin: 0 6px; }
+
+    .paper h2 {
+      font-size: 0.86rem; letter-spacing: 0; margin: 18px 0 8px; padding-bottom: 4px;
+      border-bottom: 1px solid var(--rule); color: var(--accent); break-after: avoid;
+    }
+    .paper p { margin: 0 0 5px; }
+    .skills { display: grid; grid-template-columns: 10.5em 1fr; gap: 3px 12px; margin: 0; }
+    .skills dt { font-weight: 600; color: var(--petrol); }
+    .skills dd { margin: 0; }
+
+    .job { margin: 0 0 11px; break-inside: avoid; }
+    .job-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+    .job-head h3 { font-size: 0.98rem; margin: 0; color: var(--petrol); }
+    .when { white-space: nowrap; font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .org { margin: 1px 0 2px; font-size: 0.9rem; }
+    .ctx { font-style: italic; color: var(--muted); font-size: 0.86rem; }
+    .paper ul { margin: 3px 0 0; padding-left: 1.1em; }
+    .paper li { margin: 0 0 2px; }
+    .paper li::marker { color: var(--accent); }
+    .employer { margin: 14px 0 8px; padding: 5px 9px; background: var(--accent-soft); font-weight: 700; color: var(--petrol); font-size: 0.92rem; break-after: avoid; }
+    .employer span { font-weight: 500; color: var(--muted); }
+    .edu { margin: 0 0 8px; }
+    .edu h3 { font-size: 0.95rem; margin: 0; color: var(--petrol); }
+
+    @media screen and (max-width: 760px) {
+      .bar { padding: 12px 16px 8px; }
+      .bar button.primary { display: none; }
+      .paper { padding: 24px 16px; box-shadow: none; margin: 0; font-size: 15px; }
+      .cv-head { flex-direction: column-reverse; align-items: flex-start; }
+      .cv-head img { width: 84px; height: 84px; }
+      .job-head { flex-direction: column; gap: 0; }
+      .skills { grid-template-columns: 1fr; }
+      .skills dd { margin-bottom: 6px; }
+    }
+
+    @page en {
+      size: A4; margin: 13mm 14mm 15mm;
+      @bottom-right { content: "Mustafa Kemal Türkeri  ·  Page " counter(page) " of " counter(pages); font: 600 7.5pt Montserrat, Arial, sans-serif; color: #0e7490; }
+    }
+    @page tr {
+      size: A4; margin: 13mm 14mm 15mm;
+      @bottom-right { content: "Mustafa Kemal Türkeri  ·  Sayfa " counter(page) " / " counter(pages); font: 600 7.5pt Montserrat, Arial, sans-serif; color: #0e7490; }
+    }
+    html[data-lang="en"] body { page: en; }
+    html[data-lang="tr"] body { page: tr; }
+    @media print {
+      html { font-size: 9pt; }
+      body { background: #fff; }
+      .bar { display: none; }
+      .paper { max-width: none; margin: 0; padding: 0; box-shadow: none; font-size: 1rem; line-height: 1.42; }
+      .employer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="bar" aria-label="CV actions">
+    <a class="home" href="index.html">← <span data-l="en">Home</span><span data-l="tr">Ana sayfa</span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+    </div>
+    <a class="btn" href="cv-en.pdf" data-l="en" download>Download PDF</a>
+    <a class="btn" href="cv-tr.pdf" data-l="tr" download>PDF indir</a>
+    <button class="btn primary" type="button" onclick="window.print()"><span data-l="en">Print</span><span data-l="tr">Yazdır</span></button>
+  </nav>
+
+  <main class="paper">
+    <header class="cv-head">
+      <div class="id">
+        <h1>Mustafa Kemal Türkeri</h1>
+        <p class="title"><span data-l="en">Water Resources Engineer | River Basin Planning, Hydrological Modelling, GIS and Data Systems</span><span data-l="tr">Su Kaynakları Mühendisi | Havza Planlaması, Hidrolojik Modelleme, CBS ve Veri Sistemleri</span></p>
+        <p class="cofounder"><span data-l="en">Co-Founder, Mecra Water and Environmental Technologies R&amp;D Co. Inc.</span><span data-l="tr">Kurucu Ortak, Mecra Su ve Çevre Teknolojileri</span> (<a href="https://mecra.tech">mecra.tech</a>)</p>
+        <p class="contact-line">Ankara, Türkiye<span class="sep">|</span><a href="tel:+905324093481">+90 532 409 34 81</a><span class="sep">|</span><a href="mailto:mustafakemalturkeri@mecra.tech">mustafakemalturkeri@mecra.tech</a><br><a href="https://www.linkedin.com/in/mustafa-kemal-t%C3%BCrkeri-326274104/">linkedin.com/in/mustafa-kemal-türkeri-326274104</a><span class="sep">|</span><a href="https://mustafakemalturkeri.github.io/">mustafakemalturkeri.github.io</a></p>
+      </div>
+    </header>
+
+    <h2><span data-l="en">Summary</span><span data-l="tr">Özet</span></h2>
+    <p data-l="en">Water resources engineer with more than 12 years of experience in river basin planning, hydrological modelling, drought and climate change impact assessment, and GIS, delivered for national water authorities (DGWM, DSİ, İSKİ, KASKİ) and international funders (EU, World Bank, ADB). Currently Kızılırmak Basin Lead in an EU-funded project preparing River Basin Management Plans under the EU Water Framework Directive. Builds the data and software tools behind this work: GIS databases, REST APIs and web applications in Python and JavaScript. PhD student in Agricultural Structures and Irrigation at Ankara University.</p>
+    <p data-l="tr">Nehir havzası planlaması, hidrolojik modelleme, kuraklık ve iklim değişikliği etki değerlendirmesi ve CBS alanlarında 12 yılı aşkın deneyime sahip su kaynakları mühendisi. Ulusal su idareleri (SYGM, DSİ, İSKİ, KASKİ) ve uluslararası finansman kuruluşları (AB, Dünya Bankası, ADB) için yürütülen projelerde görev almıştır. Halen AB Su Çerçeve Direktifi kapsamında nehir havzası yönetim planlarını hazırlayan AB finansmanlı 6NHYP projesinde Kızılırmak Havza Sorumlusu olarak çalışmaktadır. Bu çalışmalarda kullanılan veri ve yazılım araçlarını da geliştirmektedir: CBS veritabanları, REST API’ler ve Python ile JavaScript tabanlı web uygulamaları. Ankara Üniversitesi’nde Tarımsal Yapılar ve Sulama alanında doktora öğrencisidir.</p>
+
+    <h2><span data-l="en">Skills</span><span data-l="tr">Yetkinlikler</span></h2>
+    <dl class="skills">
+      <dt><span data-l="en">Water resources</span><span data-l="tr">Su kaynakları</span></dt>
+      <dd><span data-l="en">River basin management planning (EU WFD), Programme of Measures, water allocation modelling, rainfall-runoff modelling, flow naturalisation, reservoir operation studies, drought management planning, drought indices (SPI, SPEI, Palmer), vulnerability assessment</span><span data-l="tr">Nehir havzası yönetim planlaması (AB Su Çerçeve Direktifi), Tedbirler Programı, su tahsisi modellemesi, yağış-akış modellemesi, akım doğallaştırma, rezervuar işletme çalışmaları, kuraklık yönetimi planlaması, kuraklık indisleri (SPI, SPEI, Palmer), etkilenebilirlik değerlendirmesi</span></dd>
+      <dt><span data-l="en">Climate</span><span data-l="tr">İklim</span></dt>
+      <dd><span data-l="en">Climate change impact assessment, statistical downscaling, CMIP5, CMIP6, CORDEX, adaptation planning, Strategic Environmental Assessment</span><span data-l="tr">İklim değişikliği etki değerlendirmesi, istatistiksel ölçek küçültme, CMIP5, CMIP6, CORDEX, uyum planlaması, Stratejik Çevresel Değerlendirme</span></dd>
+      <dt><span data-l="en">Modelling tools</span><span data-l="tr">Modelleme araçları</span></dt>
+      <dd>WEAP, HEC-HMS, HEC-RAS, SWAT</dd>
+      <dt><span data-l="en">GIS</span><span data-l="tr">CBS</span></dt>
+      <dd><span data-l="en">ArcGIS, QGIS, GRASS GIS, Global Mapper, MapInfo, GeoPandas, remote sensing</span><span data-l="tr">ArcGIS, QGIS, GRASS GIS, Global Mapper, MapInfo, GeoPandas, uzaktan algılama</span></dd>
+      <dt><span data-l="en">Programming</span><span data-l="tr">Programlama</span></dt>
+      <dd>Python, MATLAB/Octave, R, C#, JavaScript, SQL, VBA, Fortran</dd>
+      <dt><span data-l="en">Data and web</span><span data-l="tr">Veri ve web</span></dt>
+      <dd><span data-l="en">SQLite, GeoPackage, xarray, Zarr, Flask, FastAPI, REST APIs, Leaflet, MapLibre GL, React, Nginx, Gunicorn, Model Context Protocol (MCP)</span><span data-l="tr">SQLite, GeoPackage, xarray, Zarr, Flask, FastAPI, REST API, Leaflet, MapLibre GL, React, Nginx, Gunicorn, Model Context Protocol (MCP)</span></dd>
+      <dt><span data-l="en">Languages</span><span data-l="tr">Diller</span></dt>
+      <dd><span data-l="en">Turkish (native), English (C1 reading and writing, C2 speaking)</span><span data-l="tr">Türkçe (ana dil), İngilizce (okuma ve yazma C1, konuşma C2)</span></dd>
+    </dl>
+
+    <h2><span data-l="en">Professional Experience</span><span data-l="tr">Mesleki Deneyim</span></h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Senior Non-Key Expert / Kızılırmak Basin Lead</span><span data-l="tr">Kıdemli Uzman (Senior Non-Key Expert) / Kızılırmak Havza Sorumlusu</span></h3>
+        <span class="when"><span data-l="en">Jan 2024 – Present</span><span data-l="tr">Oca 2024 – Halen</span></span>
+      </div>
+      <p class="org">DAI Global Austria GmbH &amp; Co KG (DAI–SYKE–NFB–ACC Consortium), Ankara</p>
+      <p class="ctx"><span data-l="en">Technical Assistance on Preparation of River Basin Management Plans for Six Basins (6RBMP; EuropeAid/140294/IH/SER/TR). Client: Directorate General for Water Management (DGWM).</span><span data-l="tr">6 Havzada Nehir Havzası Yönetim Planlarının Hazırlanması İçin Teknik Yardım Projesi (6NHYP; EuropeAid/140294/IH/SER/TR). İdare: Su Yönetimi Genel Müdürlüğü (SYGM).</span></p>
+      <ul data-l="en">
+        <li>Main contact point for the Kızılırmak Basin; coordinate the multidisciplinary team’s work with the client.</li>
+        <li>Lead the preparation of the Kızılırmak River Basin Management Plan under the WFD, including hydrological, ecological and chemical status assessments.</li>
+        <li>Design the Programme of Measures: prioritise measures against pressures on water bodies and set timelines and regulatory and technical measures.</li>
+        <li>Model water allocation with WEAP: water balance, future demand under climate and socio-economic scenarios, and environmental flow requirements.</li>
+        <li>Designed, developed and deployed the project’s internal GIS database and web application: SQLite/GeoPackage data store with GeoPackage–Excel joins; Flask REST API serving status, pressure, impact, risk, monitoring and measure data; Leaflet interface with vector tiles and hash-validated caching; role-based access control, CSRF protection and login rate limiting; deployment behind an Nginx reverse proxy with multi-worker Gunicorn.</li>
+        <li>Built an MCP server that exposes the database to an AI assistant through query tools, and set up that assistant for the project team.</li>
+        <li>Coordinate GIS work across the project; deliver capacity-building workshops and training for stakeholders and government agencies.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>Kızılırmak Havzası’nın ana irtibat kişisi olarak çok disiplinli ekibin çalışmalarını idareyle koordine etmektedir.</li>
+        <li>Su Çerçeve Direktifi kapsamında hidrolojik, ekolojik ve kimyasal durum değerlendirmeleri dahil Kızılırmak Nehir Havzası Yönetim Planı’nın hazırlanmasını yönetmektedir.</li>
+        <li>Tedbirler Programı’nı tasarlamaktadır: su kütleleri üzerindeki baskılara yönelik tedbirleri önceliklendirmekte, uygulama takvimini ve idari ve teknik tedbirleri belirlemektedir.</li>
+        <li>WEAP ile su tahsisini modellemektedir: su bütçesi, iklim ve sosyo-ekonomik senaryolar altında gelecekteki talep ve çevresel akış ihtiyaçları.</li>
+        <li>Projenin kurum içi CBS veritabanını ve web uygulamasını tasarladı, geliştirdi ve devreye aldı: GeoPackage–Excel birleştirmeli SQLite/GeoPackage veri altyapısı; durum, baskı, etki, risk, izleme ve tedbir verilerini sunan Flask REST API; vektör karo (vector tile) ve karma (hash) doğrulamalı önbellek kullanan Leaflet arayüzü; rol tabanlı erişim, CSRF koruması ve giriş denemesi sınırlaması; Nginx ters vekil sunucu arkasında çok işçili (multi-worker) Gunicorn ile canlı kurulum.</li>
+        <li>Veritabanını sorgu araçlarıyla bir yapay zekâ asistanına bağlayan bir MCP sunucusu geliştirdi ve bu asistanı proje ekibinin kullanımına sundu.</li>
+        <li>Proje genelindeki CBS çalışmalarını koordine etmekte; paydaşlar ve kamu kurumları için kapasite geliştirme çalıştayları ve eğitimler düzenlemektedir.</li>
+      </ul>
+    </article>
+
+    <p class="employer"><span data-l="en">Dolsar Engineering Inc. Co., Ankara</span><span data-l="tr">Dolsar Mühendislik A.Ş., Ankara</span> <span>· <span data-l="en">Dec 2013 – Jan 2024</span><span data-l="tr">Ara 2013 – Oca 2024</span></span></p>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Climate Change Specialist</span><span data-l="tr">İklim Değişikliği Uzmanı</span></h3>
+        <span class="when"><span data-l="en">Sep 2023 – Jan 2024</span><span data-l="tr">Eyl 2023 – Oca 2024</span></span>
+      </div>
+      <p class="org"><span data-l="en">Kurram Tangi Integrated Water Resources Development Project, Asian Development Bank (Pakistan)</span><span data-l="tr">Kurram Tangi Entegre Su Kaynakları Geliştirme Projesi, Asya Kalkınma Bankası (Pakistan)</span></p>
+      <ul data-l="en">
+        <li>Downscaled CMIP6 models statistically to the project area and assessed climate change impacts on hydrometeorological variables for a dam of about 100 m height (65 MW, 140,000 ha irrigation command area).</li>
+        <li>Built rainfall-runoff models of the Kurram Tangi watershed to assess hydrological response, flood risk and water availability.</li>
+        <li>Analysed near-, mid- and long-term projections for risks to water supply and dam safety; recommended adaptation and mitigation measures.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>CMIP6 modellerine proje alanı için istatistiksel ölçek küçültme uyguladı; yaklaşık 100 m yüksekliğindeki baraj (65 MW kurulu güç, 140.000 ha sulama alanı) için iklim değişikliğinin hidrometeorolojik değişkenler üzerindeki etkilerini değerlendirdi.</li>
+        <li>Hidrolojik tepkiyi, taşkın riskini ve su varlığını değerlendirmek için Kurram Tangi havzasının yağış-akış modellerini kurdu.</li>
+        <li>Su temini ve baraj güvenliğine yönelik riskleri yakın, orta ve uzak dönem projeksiyonlarıyla analiz etti; uyum ve azaltım tedbirleri önerdi.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Team Leader / Project Coordinator</span><span data-l="tr">Takım Lideri / Proje Koordinatörü</span></h3>
+        <span class="when"><span data-l="en">Sep 2021 – Feb 2023</span><span data-l="tr">Eyl 2021 – Şub 2023</span></span>
+      </div>
+      <p class="org"><span data-l="en">Kızılırmak Basin Drought Management Plan, Directorate General for Water Management (DGWM)</span><span data-l="tr">Kızılırmak Havzası Kuraklık Yönetim Planı, Su Yönetimi Genel Müdürlüğü (SYGM)</span></p>
+      <ul data-l="en">
+        <li>Led the project team and acted as main contact with the client; ran stakeholder engagement sessions.</li>
+        <li>Calculated drought indices and assessed drought impacts and vulnerability for agriculture, drinking water, industry, ecosystems and tourism.</li>
+        <li>Assessed future drought risk with downscaled climate projections and rainfall-runoff modelling.</li>
+        <li>Prepared the Strategic Environmental Assessment report; developed drought action and emergency response plans.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>Proje ekibini yönetti ve idareyle ana irtibatı sağladı; paydaş katılım toplantılarını yürüttü.</li>
+        <li>Kuraklık indislerini hesapladı; tarım, içme suyu, sanayi, ekosistem ve turizm sektörleri için kuraklık etkilerini ve etkilenebilirliği değerlendirdi.</li>
+        <li>Ölçeği küçültülmüş iklim projeksiyonları ve yağış-akış modellemesiyle gelecekteki kuraklık riskini değerlendirdi.</li>
+        <li>Stratejik Çevresel Değerlendirme raporunu hazırladı; kuraklık eylem planı ile acil durum müdahale planlarını geliştirdi.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Climate Change Specialist / Drought Management Specialist / GIS Lead</span><span data-l="tr">İklim Değişikliği Uzmanı / Kuraklık Yönetimi Uzmanı / CBS Sorumlusu</span></h3>
+        <span class="when"><span data-l="en">Jun 2018 – Jan 2023</span><span data-l="tr">Haz 2018 – Oca 2023</span></span>
+      </div>
+      <p class="org"><span data-l="en">İstanbul Drinking Water and Wastewater Master Plan, İstanbul Water and Wastewater Administration (İSKİ)</span><span data-l="tr">İstanbul İçme Suyu ve Atıksu Master Planı, İstanbul Su ve Kanalizasyon İdaresi (İSKİ)</span></p>
+      <ul data-l="en">
+        <li>Prepared the climate change and drought impact and vulnerability assessment for drinking water, agriculture, industry and health (planning horizon 2053).</li>
+        <li>Analysed about 40 downscaled climate projections (CMIP5 and CMIP6) and developed climate impact scenarios.</li>
+        <li>Led GIS work: high-risk zone mapping and GIS tools for water demand and population growth analysis.</li>
+        <li>Contributed to the drought emergency response plan and the long-term climate resilience action plan.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>İçme suyu, tarım, sanayi ve sağlık sektörleri için iklim değişikliği ve kuraklık etki ve etkilenebilirlik değerlendirmesini hazırladı (planlama ufku 2053).</li>
+        <li>Ölçeği küçültülmüş yaklaşık 40 iklim projeksiyonunu (CMIP5 ve CMIP6) analiz etti ve iklim etki senaryoları geliştirdi.</li>
+        <li>CBS çalışmalarını yönetti: yüksek riskli bölgeleri haritaladı; su talebi ve nüfus artışı analizleri için CBS araçları geliştirdi.</li>
+        <li>Kuraklık acil durum müdahale planına ve uzun vadeli iklim dayanıklılığı eylem planına katkı sağladı.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Climate Change Specialist / Drought Management Specialist / Hydrology Expert</span><span data-l="tr">İklim Değişikliği Uzmanı / Kuraklık Yönetimi Uzmanı / Hidroloji Uzmanı</span></h3>
+        <span class="when"><span data-l="en">May 2020 – Jan 2022</span><span data-l="tr">May 2020 – Oca 2022</span></span>
+      </div>
+      <p class="org"><span data-l="en">Integrated Urban Water Management Plan for Kahramanmaraş Province, KASKİ / World Bank</span><span data-l="tr">Kahramanmaraş İli Entegre Kentsel Su Yönetimi Planı, KASKİ / Dünya Bankası</span></p>
+      <ul data-l="en">
+        <li>Assessed climate change impacts on the province’s water resources and projected drinking water supply and demand under climate scenarios.</li>
+        <li>Modelled drought scenarios for water supply, agriculture and industry; compared climate change and business-as-usual scenarios.</li>
+        <li>Recommended adaptation measures for water management.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>İklim değişikliğinin ilin su kaynakları üzerindeki etkilerini değerlendirdi; iklim senaryoları altında içme suyu arz ve talep projeksiyonlarını hazırladı.</li>
+        <li>Su temini, tarım ve sanayi için kuraklık senaryolarını modelledi; iklim değişikliği senaryolarını mevcut eğilim (business-as-usual) senaryosuyla karşılaştırdı.</li>
+        <li>Su yönetimine yönelik uyum tedbirleri önerdi.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Project Coordinator / Drought Management Specialist / Project Engineer</span><span data-l="tr">Proje Koordinatörü / Kuraklık Yönetimi Uzmanı / Proje Mühendisi</span></h3>
+        <span class="when"><span data-l="en">Nov 2016 – Dec 2018</span><span data-l="tr">Kas 2016 – Ara 2018</span></span>
+      </div>
+      <p class="org"><span data-l="en">Antalya and Burdur Basins Drought Management Plans, Directorate General for Water Management (DGWM)</span><span data-l="tr">Antalya ve Burdur Havzaları Kuraklık Yönetim Planları, Su Yönetimi Genel Müdürlüğü (SYGM)</span></p>
+      <ul data-l="en">
+        <li>Coordinated the project team, the client and regional stakeholders.</li>
+        <li>Calculated drought indices and carried out sector-specific vulnerability analyses for agriculture, drinking water, industry, ecosystems and tourism.</li>
+        <li>Developed hydrological models and drought scenarios, integrated downscaled climate projections, and prepared long-term drought action plans.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>Proje ekibi, idare ve bölgesel paydaşlar arasındaki koordinasyonu yürüttü.</li>
+        <li>Kuraklık indislerini hesapladı; tarım, içme suyu, sanayi, ekosistem ve turizm sektörleri için etkilenebilirlik analizleri yaptı.</li>
+        <li>Hidrolojik modeller ve kuraklık senaryoları geliştirdi, ölçeği küçültülmüş iklim projeksiyonlarını analizlere dahil etti ve uzun vadeli kuraklık eylem planlarını hazırladı.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Project Engineer / GIS Lead</span><span data-l="tr">Proje Mühendisi / CBS Sorumlusu</span></h3>
+        <span class="when"><span data-l="en">Feb 2015 – 2020</span><span data-l="tr">Şub 2015 – 2020</span></span>
+      </div>
+      <p class="org"><span data-l="en">Kızılırmak Basin Master Plan, General Directorate of State Hydraulic Works (DSİ)</span><span data-l="tr">Kızılırmak Havzası Master Planı, Devlet Su İşleri Genel Müdürlüğü (DSİ)</span></p>
+      <ul data-l="en">
+        <li>Led GIS applications and spatial analyses for the 82,000 km² basin; built the basin’s water resources inventory.</li>
+        <li>Projected population and water demand in line with DSİ guidelines.</li>
+        <li>Naturalised river flows to establish the hydrological baseline.</li>
+        <li>Carried out operation studies for dams, reservoirs and irrigation schemes.</li>
+        <li>Took part in the preparation of the interim and final reports on flood control and sediment control.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>82.000 km²’lik havzada CBS uygulamalarını ve mekânsal analizleri yönetti; havzanın su kaynakları envanterini oluşturdu.</li>
+        <li>DSİ yönergelerine uygun olarak nüfus ve su ihtiyacı projeksiyonlarını hazırladı.</li>
+        <li>Hidrolojik referans durumunu belirlemek için akım doğallaştırma çalışmalarını yaptı.</li>
+        <li>Barajlar, rezervuarlar ve sulama tesisleri için işletme çalışmaları yaptı.</li>
+        <li>Taşkın kontrolü ve rüsubat kontrolü ara ve nihai raporlarının hazırlanmasında görev aldı.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><span data-l="en">Project Engineer</span><span data-l="tr">Proje Mühendisi</span></h3>
+        <span class="when"><span data-l="en">Dec 2013 – Sep 2015</span><span data-l="tr">Ara 2013 – Eyl 2015</span></span>
+      </div>
+      <p class="org"><span data-l="en">Konya Basin Drought Management Plan, Directorate General for Water Management (DGWM)</span><span data-l="tr">Konya Havzası Kuraklık Yönetim Planı, Su Yönetimi Genel Müdürlüğü (SYGM)</span></p>
+      <ul data-l="en">
+        <li>Türkiye’s first government drought management plan: drought assessment with drought indices and vulnerability analyses for agriculture, drinking water and industry.</li>
+        <li>Started development of the Drought Index Calculation and Analysis Software (MATLAB) for drought assessment and monitoring.</li>
+        <li>Full-stack developer of a web application for drought assessment and visualisation (JavaScript, HTML; client-side), briefly put into service for the client.</li>
+        <li>GIS and remote sensing analyses; integrated downscaled climate projections; contributed to the action plan and drought management methodology.</li>
+      </ul>
+      <ul data-l="tr">
+        <li>Türkiye’nin ilk resmi kuraklık yönetim planı kapsamında kuraklık indisleriyle kuraklık değerlendirmesi ve tarım, içme suyu ve sanayi sektörleri için etkilenebilirlik analizleri yaptı.</li>
+        <li>Kuraklık değerlendirmesi ve izlemesi için Kuraklık İndisi Hesaplama ve Analiz Yazılımı’nın (MATLAB) geliştirilmesine başladı.</li>
+        <li>Kuraklık değerlendirmesi ve görselleştirmesi için istemci tarafında çalışan bir web uygulamasını (JavaScript, HTML) full-stack geliştirici olarak geliştirdi; uygulama kısa bir süre idarenin kullanımında kaldı.</li>
+        <li>CBS ve uzaktan algılama analizleri yaptı; ölçeği küçültülmüş iklim projeksiyonlarını analizlere dahil etti; eylem planına ve kuraklık yönetimi metodolojisine katkı sağladı.</li>
+      </ul>
+    </article>
+
+    <h2><span data-l="en">Selected Software</span><span data-l="tr">Seçili Yazılımlar</span></h2>
+    <ul data-l="en">
+      <li><strong>HALYS – Hydroclimatic Analysis System</strong> (in development, not yet released): a web-based drought analysis model and early warning system.</li>
+      <li><strong>Drought Index Calculation and Analysis Software</strong>: SPI, SPEI and Palmer indices, drought statistics, hazard and risk mapping (MATLAB); development started in the Konya Basin Drought Management Plan.</li>
+      <li><strong>NATFLOW</strong>: flow naturalisation and gauge data analysis software (C#/.NET).</li>
+      <li><strong>Population Estimation Software</strong>: population projections in line with DSİ guidelines (C#/.NET).</li>
+    </ul>
+    <ul data-l="tr">
+      <li><strong>HALYS – Hydroclimatic Analysis System</strong> (geliştirme aşamasında, henüz yayımlanmadı): web tabanlı kuraklık analiz modeli ve erken uyarı sistemi.</li>
+      <li><strong>Kuraklık İndisi Hesaplama ve Analiz Yazılımı</strong>: SPI, SPEI ve Palmer indisleri, kuraklık istatistikleri, tehlike ve risk haritaları (MATLAB); geliştirilmesine Konya Havzası Kuraklık Yönetim Planı’nda başlandı.</li>
+      <li><strong>NATFLOW</strong>: akım doğallaştırma ve akım gözlem verilerinin analizi için yazılım (C#/.NET).</li>
+      <li><strong>Nüfus Tahmin Yazılımı</strong>: DSİ yönergelerine göre nüfus projeksiyonları (C#/.NET).</li>
+    </ul>
+
+    <h2><span data-l="en">Education</span><span data-l="tr">Eğitim</span></h2>
+    <div class="edu">
+      <h3><span data-l="en">PhD, Agricultural Structures and Irrigation (in progress, coursework stage)</span><span data-l="tr">Doktora, Tarımsal Yapılar ve Sulama (devam ediyor, ders aşaması)</span></h3>
+      <p><span data-l="en">Ankara University, Graduate School of Natural and Applied Sciences · Sep 2026 – Present</span><span data-l="tr">Ankara Üniversitesi Fen Bilimleri Enstitüsü · Eyl 2026 – Halen</span></p>
+    </div>
+    <div class="edu">
+      <h3><span data-l="en">MSc, Civil Engineering</span><span data-l="tr">Yüksek Lisans, İnşaat Mühendisliği</span></h3>
+      <p><span data-l="en">Middle East Technical University (METU), Ankara · 2019 · CGPA 3.29</span><span data-l="tr">Orta Doğu Teknik Üniversitesi (ODTÜ), Ankara · 2019 · GNO 3,29</span></p>
+      <p class="ctx"><span data-l="en">Thesis: <a href="http://etd.lib.metu.edu.tr/upload/12624869/index.pdf">Risk-based reservoir operation under drought conditions</a> (34 operation scenarios, including 24 probabilistic drought scenarios, with WEAP)</span><span data-l="tr">Tez: <a href="http://etd.lib.metu.edu.tr/upload/12624869/index.pdf">Risk-based reservoir operation under drought conditions</a> (kuraklık koşullarında risk esaslı rezervuar işletmesi; 24’ü olasılıksal kuraklık senaryosu olmak üzere WEAP ile 34 işletme senaryosu)</span></p>
+    </div>
+    <div class="edu">
+      <h3><span data-l="en">BSc, Civil Engineering</span><span data-l="tr">Lisans, İnşaat Mühendisliği</span></h3>
+      <p><span data-l="en">Middle East Technical University (METU), Ankara · 2013 · Honour student in the last two semesters</span><span data-l="tr">Orta Doğu Teknik Üniversitesi (ODTÜ), Ankara · 2013 · Son iki dönem onur öğrencisi</span></p>
+    </div>
+
+    <h2><span data-l="en">Awards and Memberships</span><span data-l="tr">Ödüller ve Üyelikler</span></h2>
+    <ul data-l="en">
+      <li>EFCA Future Leaders Award 2021, Honorary Mention (European Federation of Engineering Consultancy Associations), with the project “Antalya and Burdur Basins Drought Management Plans”.</li>
+      <li>Winner, web site development contest, Turkish National Informatics Congress and METU IEEE Student Branch, 1999.</li>
+      <li>Member, Chamber of Civil Engineers (İMO), Union of Chambers of Turkish Engineers and Architects (UCTEA).</li>
+    </ul>
+    <ul data-l="tr">
+      <li>“Antalya ve Burdur Havzaları Kuraklık Yönetim Planları” projesiyle EFCA Future Leaders Award 2021 mansiyonu (European Federation of Engineering Consultancy Associations).</li>
+      <li>Turkish National Informatics Congress ve ODTÜ IEEE Öğrenci Kolu web sitesi geliştirme yarışması birinciliği, 1999.</li>
+      <li>TMMOB İnşaat Mühendisleri Odası (İMO) üyesi.</li>
+    </ul>
+
+    <h2><span data-l="en">Publications</span><span data-l="tr">Yayınlar</span></h2>
+    <ul>
+      <li>Türkeri, M.K. (2022). Drinking Water Supply Under Drought and Climate Change Impacts: Kahramanmaraş City Centre as a Case Study. 3rd BH Water Congress, Sarajevo, Bosnia and Herzegovina.</li>
+      <li>Türkeri, M.K., Şimşek, Ç. (2019). Hydrological Drought Early Warning System Development Under Risk-Based Deficit Predictions on Drought Conditions. Hydro 2019, Porto, Portugal.</li>
+      <li>Türkeri, M.K., Köken, E. (2015). Game Engine Based Visualization as a Supporting Tool in Dam Engineering and Water Resources Planning Projects (poster). Hydro 2015, Bordeaux, France.</li>
+      <li>Köken, E., Türkeri, M.K., Alan, S., Güner, M. (2014). Operation of Multipurpose Dam Reservoirs under the Influence of Climate Change and Assessing Future Energy Production: The Mavi Tunnel Project as a Case Study. Hydro 2014, Milan, Italy.</li>
+      <li>Çiçekçi, O.C., Türkeri, M.K., Pekcan, O. (2014). Development of Soil Profile Visualization Software Using Game Engines. Geo-Congress 2014, Atlanta, Georgia, USA.</li>
+    </ul>
+  </main>
+</body>
+</html>
